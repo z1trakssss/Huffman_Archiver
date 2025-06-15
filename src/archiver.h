@@ -1,8 +1,8 @@
 #ifndef ARCHIVER_HPP
 #define ARCHIVER_HPP
 
-#include <map>      // добавлено
-#include <string>   // добавлено
+#include <map>      
+#include <string>   
 #include <vector>
 
 class Archiver {

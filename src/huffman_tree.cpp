@@ -1,4 +1,4 @@
-#include "huffman_tree.hpp"
+#include "huffman_tree.h"
 #include <queue>
 
 HuffmanTree::Node::Node(char c, int f) : ch(c), freq(f), left(nullptr), right(nullptr) {}

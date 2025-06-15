@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/khadi/Documents/Huffman_Archiver/src/archiver.cpp" "CMakeFiles/archiver.dir/src/archiver.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/archiver.cpp.obj.d"
-  "C:/Users/khadi/Documents/Huffman_Archiver/src/bit_stream.cpp" "CMakeFiles/archiver.dir/src/bit_stream.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/bit_stream.cpp.obj.d"
-  "C:/Users/khadi/Documents/Huffman_Archiver/src/huffman_tree.cpp" "CMakeFiles/archiver.dir/src/huffman_tree.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/huffman_tree.cpp.obj.d"
-  "C:/Users/khadi/Documents/Huffman_Archiver/src/main.cpp" "CMakeFiles/archiver.dir/src/main.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/main.cpp.obj.d"
+  "C:/Users/khad/Documents/Huffman_Archiver/main.cpp" "CMakeFiles/archiver.dir/main.cpp.obj" "gcc" "CMakeFiles/archiver.dir/main.cpp.obj.d"
+  "C:/Users/khad/Documents/Huffman_Archiver/src/archiver.cpp" "CMakeFiles/archiver.dir/src/archiver.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/archiver.cpp.obj.d"
+  "C:/Users/khad/Documents/Huffman_Archiver/src/bit_stream.cpp" "CMakeFiles/archiver.dir/src/bit_stream.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/bit_stream.cpp.obj.d"
+  "C:/Users/khad/Documents/Huffman_Archiver/src/huffman_tree.cpp" "CMakeFiles/archiver.dir/src/huffman_tree.cpp.obj" "gcc" "CMakeFiles/archiver.dir/src/huffman_tree.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

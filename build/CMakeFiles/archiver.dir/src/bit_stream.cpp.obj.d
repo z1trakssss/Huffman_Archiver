@@ -1,6 +1,6 @@
 CMakeFiles/archiver.dir/src/bit_stream.cpp.obj: \
- C:\Users\khadi\Documents\Huffman_Archiver\src\bit_stream.cpp \
- C:\Users\khadi\Documents\Huffman_Archiver\src\bit_stream.hpp \
+ C:\Users\khad\Documents\Huffman_Archiver\src\bit_stream.cpp \
+ C:\Users\khad\Documents\Huffman_Archiver\src\bit_stream.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/fstream \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \

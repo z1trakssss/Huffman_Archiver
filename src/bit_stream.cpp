@@ -1,4 +1,4 @@
-#include "bit_stream.hpp"
+#include "bit_stream.h"
 
 BitStream::BitStream(const std::string& filename, std::ios::openmode mode)
     : file(filename, mode), bitBuffer(0), bitCount(0) {

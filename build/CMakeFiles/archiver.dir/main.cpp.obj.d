@@ -1,6 +1,6 @@
-CMakeFiles/archiver.dir/src/main.cpp.obj: \
- C:\Users\khadi\Documents\Huffman_Archiver\src\main.cpp \
- C:\Users\khadi\Documents\Huffman_Archiver\src\archiver.hpp \
+CMakeFiles/archiver.dir/main.cpp.obj: \
+ C:\Users\khad\Documents\Huffman_Archiver\main.cpp \
+ C:/Users/khad/Documents/Huffman_Archiver/src/archiver.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/map \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \

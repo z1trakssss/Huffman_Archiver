@@ -5,14 +5,13 @@ project(HuffmanArchiver)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Добавляем все исходники
+include_directories(src)
+
 set(SOURCES
-    src/main.cpp
+    main.cpp
     src/archiver.cpp
     src/huffman_tree.cpp
     src/bit_stream.cpp
 )
 
 add_executable(archiver ${SOURCES})
-
-target_include_directories(archiver PRIVATE src)

@@ -1,6 +1,6 @@
 CMakeFiles/archiver.dir/src/archiver.cpp.obj: \
- C:\Users\khadi\Documents\Huffman_Archiver\src\archiver.cpp \
- C:\Users\khadi\Documents\Huffman_Archiver\src\archiver.hpp \
+ C:\Users\khad\Documents\Huffman_Archiver\src\archiver.cpp \
+ C:\Users\khad\Documents\Huffman_Archiver\src\archiver.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/map \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -112,8 +112,8 @@ CMakeFiles/archiver.dir/src/archiver.cpp.obj: \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/stl_vector.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/vector.tcc \
- C:\Users\khadi\Documents\Huffman_Archiver\src\huffman_tree.hpp \
- C:\Users\khadi\Documents\Huffman_Archiver\src\bit_stream.hpp \
+ C:\Users\khad\Documents\Huffman_Archiver\src\huffman_tree.h \
+ C:\Users\khad\Documents\Huffman_Archiver\src\bit_stream.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/fstream \
  C:/Program\ Files/mingw64/include/c++/14.2.0/istream \
  C:/Program\ Files/mingw64/include/c++/14.2.0/ios \
