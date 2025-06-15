@@ -67,6 +67,25 @@ void Archiver::decompress(const std::string& archiveName) {
         frequencies[c] = freq;
     }
 
+    std::ofstream freqFile("frequencies.txt");
+    if (freqFile.is_open()) {
+        freqFile << "Char\tFrequency\n";
+        for (const auto& [ch, freq] : frequencies) {
+            if (isprint(static_cast<unsigned char>(ch))) {
+                freqFile << "`" << ch << "`\t" << freq << "\n";
+            } 
+            else {
+                freqFile << "0x" << std::hex << (static_cast<int>(static_cast<unsigned char>(ch))) << std::dec << "\t" << freq << "\n";
+            }
+        }
+        freqFile.close();
+        std::cout << "Symbols frequencies saved to frenquencies.txt\n";
+    }
+    else {
+        std::cerr << "Error: cannot create frequencies.txt\n";
+    }
+    
+
     uint64_t totalSymbols = 0;
     for (int b = 0; b < 8; b++) {
         totalSymbols |= (static_cast<uint64_t>(reader.readBits(8) << (b * 8)));
