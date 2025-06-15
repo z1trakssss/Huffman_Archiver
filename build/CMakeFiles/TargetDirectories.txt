@@ -1,3 +1,0 @@
-C:/Users/khad/Documents/Huffman_Archiver/build/CMakeFiles/archiver.dir
-C:/Users/khad/Documents/Huffman_Archiver/build/CMakeFiles/edit_cache.dir
-C:/Users/khad/Documents/Huffman_Archiver/build/CMakeFiles/rebuild_cache.dir

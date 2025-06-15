@@ -1,26 +1,39 @@
-#include "archiver.h"
 #include <iostream>
-#include <vector>
+#include <string>
+#include <filesystem>
+#include "src/huffman.h"
+
+namespace fs = std::filesystem;
 
 int main(int argc, char* argv[]) {
     if (argc < 3) {
-        std::cout << "Usage: archiver -c <archive_name> <file1> [file2 ...]" << std::endl;
-        return 111;
+        std::cerr << "Usage: " << argv[0] << " <command> <file> [output_file]\n";
+        std::cerr << "Commands: compress, decompress, decompress_with_freq\n";
+        return 1;
     }
 
-    Archiver archiver;
-    std::string archiveName = argv[2];
-    std::vector<std::string> files;
+    std::string command = argv[1];
+    std::string input_file = argv[2];
+    std::string output_file = argc > 3 ? argv[3] : (command == "compress" ? input_file + ".huff" : fs::path(input_file).stem().string() + "_decomp" + fs::path(input_file).extension().string());
 
-    for (int i = 3; i < argc; i++) {
-        files.push_back(argv[i]);
-    }
-
-    if (std::string(argv[1]) == "-c") {
-        archiver.compress(archiveName, files);
-    }
-    else if (std::string(argv[1]) == "-d") {
-        archiver.decompress(archiveName);
+    HuffmanArchiver archiver;
+    try {
+        if (command == "compress") {
+            archiver.compress(input_file, output_file);
+            std::cout << "Compression completed: " << output_file << "\n";
+        } else if (command == "decompress") {
+            archiver.decompress(input_file, output_file);
+            std::cout << "Decompression completed: " << output_file << "\n";
+        } else if (command == "decompress_with_freq") {
+            archiver.decompress(input_file, output_file, true);
+            std::cout << "Decompression with frequencies completed: " << output_file << "\n";
+        } else {
+            std::cerr << "Unknown command: " << command << "\n";
+            return 1;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
+        return 1;
     }
 
     return 0;
