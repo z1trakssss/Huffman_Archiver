@@ -5,19 +5,16 @@
 
 namespace fs = std::filesystem;
 
-// Implementation of node constructors
 Node::Node(unsigned char s, uint64_t f) : symbol(s), freq(f), left(nullptr), right(nullptr) {}
 Node::Node(std::shared_ptr<Node> l, std::shared_ptr<Node> r) 
     : symbol(0), freq(l->freq + r->freq), left(l), right(r) {}
 
-// Comparator for priority queue
 struct Compare {
     bool operator()(const std::shared_ptr<Node>& a, const std::shared_ptr<Node>& b) {
         return a->freq > b->freq;
     }
 };
 
-// Implementation of HuffmanArchiver methods
 void HuffmanArchiver::buildFrequencyTable(const std::string& input_file) {
     std::ifstream in(input_file, std::ios::binary);
     if (!in) throw std::runtime_error("Failed to open input file");
@@ -74,12 +71,6 @@ void HuffmanArchiver::readFrequencyTable(std::ifstream& in) {
     }
 }
 
-/**
- * @brief Compresses the input file into an archive using Huffman algorithm
- * @param input_file Path to the input file
- * @param output_file Path to the output archive
- * @throws std::runtime_error If files cannot be opened or compression fails
- */
 void HuffmanArchiver::compress(const std::string& input_file, const std::string& output_file) {
     freq_table.clear();
     huffman_codes.clear();
@@ -147,9 +138,9 @@ void HuffmanArchiver::decompress(const std::string& input_file, const std::strin
     std::shared_ptr<Node> current = root;
     unsigned char byte;
     std::streampos file_size = fs::file_size(input_file);
-    std::streampos data_start = freq_table.size() * 9 + 4; // Начало данных
-    std::streampos data_end = file_size - std::streamoff(1); // Конец данных (исключая padding)
-    uint64_t total_bits = (data_end - data_start) * 8 - padding; // Общее количество бит для обработки
+    std::streampos data_start = freq_table.size() * 9 + 4;
+    std::streampos data_end = file_size - std::streamoff(1);
+    uint64_t total_bits = (data_end - data_start) * 8 - padding;
     uint64_t processed_bits = 0;
 
     while (in.read(reinterpret_cast<char*>(&byte), 1) && in.tellg() <= data_end) {
